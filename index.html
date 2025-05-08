@@ -8,13 +8,13 @@
   <style>
     body {
       font-family: 'Segoe UI', sans-serif;
-      background: #fffaf8;
+      background: #f0f0f0;
       color: #333;
       margin: 0;
       padding: 0;
     }
     header {
-      background: #e8c3b9;
+      background: #A3BFD9;
       color: white;
       padding: 2rem;
       text-align: center;
@@ -25,7 +25,7 @@
       margin: auto;
     }
     h2 {
-      color: #b85c5c;
+      color: #5A7690;
     }
     label {
       display: block;
@@ -42,29 +42,41 @@
     button {
       margin-top: 2rem;
       padding: 0.8rem 1.5rem;
-      background: #b85c5c;
+      background: #5A7690;
       color: white;
       border: none;
       border-radius: 8px;
       cursor: pointer;
     }
     button:hover {
-      background: #a24e4e;
+      background: #4A5E75;
     }
   </style>
 </head>
 <body>
   <header>
     <h1>You're Invited!</h1>
-    <p>Join us for the wedding of Alex & Jamie</p>
-    <p>August 16, 2025 – Grace Bay, Turks and Caicos</p>
+    <p>Join us for the wedding of Johanny & Jeffrey</p>
+    <p>May 25, 2025 – Grace Bay, Turks and Caicos</p>
+    <p>Please RSVP by May 18, 2025</p>
   </header>
 
   <main>
     <h2>RSVP</h2>
     <form id="rsvpForm">
-      <label for="name">Your Full Name</label>
-      <input type="text" id="name" name="name" required />
+      <label for="guestName">Select Your Name</label>
+      <select id="guestName" name="guestName" required>
+        <option value="">-- I'm on the guest list --</option>
+        <option value="Alice Johnson" data-plusone="yes">Alice Johnson</option>
+        <option value="Brian Smith" data-plusone="no">Brian Smith</option>
+        <option value="Carmen Lopez" data-plusone="yes">Carmen Lopez</option>
+        <option value="David Lee" data-plusone="no">David Lee</option>
+      </select>
+
+      <div id="plusOneSection" style="display:none;">
+        <label for="plusOne">Plus One Name</label>
+        <input type="text" id="plusOne" name="plusOne" placeholder="Your guest's full name" />
+      </div>
 
       <label for="attendance">Will you attend?</label>
       <select id="attendance" name="attendance" required>
@@ -74,12 +86,21 @@
       </select>
 
       <div id="menuSection" style="display:none;">
-        <label for="meal">Meal Preference</label>
-        <select id="meal" name="meal">
-          <option value="">-- Choose a dish --</option>
-          <option value="chicken">Herb-Crusted Chicken</option>
-          <option value="beef">Grilled Filet Mignon</option>
-          <option value="vegan">Stuffed Bell Peppers (Vegan)</option>
+        <label for="meal">Select Your Main Course</label>
+        <select id="meal" name="meal" required>
+          <option value="">-- Choose your meal --</option>
+          <option value="chicken">Lemon Herb Chicken</option>
+          <option value="beef">Prime Rib with Garlic Mashed Potatoes</option>
+          <option value="fish">Grilled Mahi Mahi with Mango Salsa</option>
+          <option value="vegan">Stuffed Portobello Mushroom (Vegan)</option>
+        </select>
+
+        <label for="dessert">Select Your Dessert</label>
+        <select id="dessert" name="dessert" required>
+          <option value="">-- Choose your dessert --</option>
+          <option value="cake">Vanilla Bean Wedding Cake</option>
+          <option value="fruit">Fresh Fruit Tart</option>
+          <option value="vegan">Vegan Chocolate Mousse</option>
         </select>
       </div>
 
@@ -91,8 +112,19 @@
   </main>
 
   <script>
+    const guestName = document.getElementById("guestName");
+    const plusOneSection = document.getElementById("plusOneSection");
     const attendance = document.getElementById("attendance");
     const menuSection = document.getElementById("menuSection");
+
+    guestName.addEventListener("change", function () {
+      const selected = this.options[this.selectedIndex];
+      if (selected.dataset.plusone === "yes") {
+        plusOneSection.style.display = "block";
+      } else {
+        plusOneSection.style.display = "none";
+      }
+    });
 
     attendance.addEventListener("change", function () {
       if (this.value === "yes") {
@@ -104,8 +136,14 @@
 
     document.getElementById("rsvpForm").addEventListener("submit", function (e) {
       e.preventDefault();
-      alert("Thank you for your RSVP!");
+      const name = guestName.value;
+      if (!name) {
+        alert("Please select your name from the guest list.");
+        return;
+      }
+      alert("Thank you for your RSVP, " + name + "!");
       this.reset();
+      plusOneSection.style.display = "none";
       menuSection.style.display = "none";
     });
   </script>
