@@ -1,0 +1,113 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Wedding RSVP</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #fffaf8;
+      color: #333;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background: #e8c3b9;
+      color: white;
+      padding: 2rem;
+      text-align: center;
+    }
+    main {
+      padding: 2rem;
+      max-width: 600px;
+      margin: auto;
+    }
+    h2 {
+      color: #b85c5c;
+    }
+    label {
+      display: block;
+      margin-top: 1rem;
+      font-weight: bold;
+    }
+    input, select, textarea {
+      width: 100%;
+      padding: 0.6rem;
+      margin-top: 0.4rem;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+    }
+    button {
+      margin-top: 2rem;
+      padding: 0.8rem 1.5rem;
+      background: #b85c5c;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #a24e4e;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>You're Invited!</h1>
+    <p>Join us for the wedding of Alex & Jamie</p>
+    <p>August 16, 2025 – Grace Bay, Turks and Caicos</p>
+  </header>
+
+  <main>
+    <h2>RSVP</h2>
+    <form id="rsvpForm">
+      <label for="name">Your Full Name</label>
+      <input type="text" id="name" name="name" required />
+
+      <label for="attendance">Will you attend?</label>
+      <select id="attendance" name="attendance" required>
+        <option value="">-- Select --</option>
+        <option value="yes">Yes, I’ll be there</option>
+        <option value="no">Sorry, I can’t make it</option>
+      </select>
+
+      <div id="menuSection" style="display:none;">
+        <label for="meal">Meal Preference</label>
+        <select id="meal" name="meal">
+          <option value="">-- Choose a dish --</option>
+          <option value="chicken">Herb-Crusted Chicken</option>
+          <option value="beef">Grilled Filet Mignon</option>
+          <option value="vegan">Stuffed Bell Peppers (Vegan)</option>
+        </select>
+      </div>
+
+      <label for="message">Leave a note for the couple (optional)</label>
+      <textarea id="message" name="message" rows="4"></textarea>
+
+      <button type="submit">Send RSVP</button>
+    </form>
+  </main>
+
+  <script>
+    const attendance = document.getElementById("attendance");
+    const menuSection = document.getElementById("menuSection");
+
+    attendance.addEventListener("change", function () {
+      if (this.value === "yes") {
+        menuSection.style.display = "block";
+      } else {
+        menuSection.style.display = "none";
+      }
+    });
+
+    document.getElementById("rsvpForm").addEventListener("submit", function (e) {
+      e.preventDefault();
+      alert("Thank you for your RSVP!");
+      this.reset();
+      menuSection.style.display = "none";
+    });
+  </script>
+</body>
+</html>
