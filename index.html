@@ -1,154 +1,185 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Wedding RSVP</title>
+  <title>Johanny & Jeffrey's Wedding</title>
   <style>
     body {
       font-family: 'Segoe UI', sans-serif;
-      background: #f0f0f0;
-      color: #333;
+      background-color: #f8f9fa;
       margin: 0;
       padding: 0;
     }
     header {
-</section>
-
-      background: #A3BFD9;
+      background-color: #A3BFD9; /* Dusty blue */
       color: white;
       padding: 2rem;
       text-align: center;
     }
-    main {<section style="text-align: center; margin: 2rem 0;">
-  <img src="Wedding shoot.jpg" alt="Johanny and Jeffrey" style="max-width: 90%; border-radius: 12px; box-shadow: 0 4px 8px rgba(0,0,0,0.2);" />
-      padding: 2rem;
-      max-width: 600px;
-      margin: auto;
+    h1, h2 {
+      margin: 0.5rem 0;
     }
-    h2 {
-      color: #5A7690;
+    .container {
+      padding: 1.5rem;
     }
-    label {
-      display: block;
-      margin-top: 1rem;
-      font-weight: bold;
+    .photo {
+      display: flex;
+      justify-content: center;
+      margin: 2rem 0;
     }
-    input, select, textarea {
-      width: 100%;
-      padding: 0.6rem;
-      margin-top: 0.4rem;
-      border-radius: 8px;
-      border: 1px solid #ccc;
+    .photo img {
+      max-width: 90%;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
     }
-    button {
-      margin-top: 2rem;
-      padding: 0.8rem 1.5rem;
-      background: #5A7690;
-      color: white;
-      border: none;
-      border-radius: 8px;
-      cursor: pointer;
+    .section {
+      background-color: #ffffff;
+      border-radius: 10px;
+      padding: 1.5rem;
+      margin-bottom: 2rem;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
     }
-    button:hover {
-      background: #4A5E75;
+    ul {
+      padding-left: 1.5rem;
+    }
+    li {
+      margin: 0.4rem 0;
     }
   </style>
 </head>
 <body>
   <header>
-    <h1>You're Invited!</h1>
-    <p>Join us for the wedding of Johanny & Jeffrey</p>
-    <p>May 25, 2025 – Grace Bay, Turks and Caicos</p>
+    <h1>Johanny & Jeffrey's Wedding</h1>
+    <h2>May 25, 2025</h2>
     <p>Please RSVP by May 18, 2025</p>
   </header>
 
-  <main>
-    <h2>RSVP</h2>
-    <form id="rsvpForm">
-      <label for="guestName">Select Your Name</label>
-      <select id="guestName" name="guestName" required>
-        <option value="">-- I'm on the guest list --</option>
-        <option value="Alice Johnson" data-plusone="yes">Alice Johnson</option>
-        <option value="Brian Smith" data-plusone="no">Brian Smith</option>
-        <option value="Carmen Lopez" data-plusone="yes">Carmen Lopez</option>
-        <option value="David Lee" data-plusone="no">David Lee</option>
-      </select>
+  <div class="container">
 
-      <div id="plusOneSection" style="display:none;">
-        <label for="plusOne">Plus One Name</label>
-        <input type="text" id="plusOne" name="plusOne" placeholder="Your guest's full name" />
-      </div>
+    <div class="photo">
+      <img src="Wedding shoot.jpg" alt="Johanny and Jeffrey" />
+    </div>
 
-      <label for="attendance">Will you attend?</label>
-      <select id="attendance" name="attendance" required>
-        <option value="">-- Select --</option>
-        <option value="yes">Yes, I’ll be there</option>
-        <option value="no">Sorry, I can’t make it</option>
-      </select>
+    <section class="section">
+      <h2>Wedding Menu</h2>
+      <ul>
+        <li>Shrimp Fry Rice</li>
+        <li>Pigeon Peas n Rice</li>
+        <li>Bake Mac n Cheese</li>
+        <li>Potato Salad</li>
+        <li>Cole Slaw</li>
+        <li>Green Salad</li>
+        <li>Roast Beef</li>
+        <li>BBQ Ribs</li>
+        <li>Escovitch Grilled Salmon/Snapper</li>
+        <li>Bake Chicken</li>
+      </ul>
+    </section>
 
-      <div id="menuSection" style="display:none;">
-        <label for="meal">Select Your Main Course</label>
-        <select id="meal" name="meal" required>
-          <option value="">-- Choose your meal --</option>
-          <option value="chicken">Lemon Herb Chicken</option>
-          <option value="beef">Prime Rib with Garlic Mashed Potatoes</option>
-          <option value="fish">Grilled Mahi Mahi with Mango Salsa</option>
-          <option value="vegan">Stuffed Portobello Mushroom (Vegan)</option>
-        </select>
+    <section class="section">
+      <h2>Guest List</h2>
+      <p>Only invited guests may RSVP. Plus ones are allowed if noted.</p>
+      <ul>
+        <li>Adolia (Mother)</li>
+        <li>Kiyanna (Daughter)</li>
+        <li>Jahniya (Daughter)</li>
+        <li>Jai (Son)</li>
+        <li>Nyla (Daughter)</li>
+        <li>Eric (Brother) (STD sent)</li>
+        <li>Garica</li>
+        <li>Samara +1 (Sister/Best friend, witness)</li>
+        <li>Samantha +1 (Sister) (STD sent)</li>
+        <li>Sammy +1 (Brother) (STD sent)</li>
+        <li>Samson +1 (Brother) (STD sent)</li>
+        <li>Riaza Missick (STD sent)</li>
+        <li>Jaden Missick</li>
+        <li>Javon Missick</li>
+        <li>Hang out staff (8) (STD sent)</li>
+        <li>Delano Gardnier</li>
+        <li>Andrel Missick</li>
+        <li>Chad Smith (Jeffrey's witness)</li>
+        <li>Trent Forbes</li>
+        <li>Mj Campbell</li>
+        <li>Corey Kelly +1</li>
+        <li>Kirk Rigby</li>
+        <li>Sharky Williams</li>
+        <li>Djan Missick</li>
+        <li>Jeff uncle (Jack Desir)</li>
+        <li>Elvius & Jasima Desir (Jeff’s parents)</li>
+        <li>Kisha Hamilton (STD sent)</li>
+        <li>Kendira Hamilton (STD sent)</li>
+        <li>Robert Smith</li>
+        <li>Kevin Ewing</li>
+        <li>Benson (STD sent)</li>
+        <li>Janae Hutchinson +1</li>
+        <li>Denise Tucker (cash n carry)</li>
+        <li>John Gardner</li>
+        <li>Ervin Gardner</li>
+        <li>Velma Gardiner</li>
+        <li>Missy Gardiner</li>
+        <li>DaNeka Desir (STD sent)</li>
+        <li>Ashley Jennings (STD sent)</li>
+        <li>Kimberly Robinson</li>
+        <li>Cassandra Desir (STD sent)</li>
+        <li>Cheese & Meriym</li>
+        <li>Theresa Williams (STD sent)</li>
+        <li>Yolanda Forbes (STD sent)</li>
+        <li>Dwayne Pratt (STD sent)</li>
+        <li>Romano Ingham</li>
+        <li>Tiana & Sirano Hunt (STD sent)</li>
+        <li>Nadie & Shadroy Dickenson (STD sent)</li>
+        <li>Camela Lightbourne (STD sent)</li>
+        <li>Samell Harvey (STD sent)</li>
+        <li>Kiesha Delancy (STD sent)</li>
+        <li>Dadre & Emilio Seymour (STD sent)</li>
+        <li>Kemo Williams +1</li>
+        <li>Alisa & Ryan Walkin (STD sent)</li>
+        <li>Sperry & Berg Zerin (STD sent)</li>
+        <li>Malo Melhado</li>
+        <li>Ranekia & Dre Daley (STD sent)</li>
+        <li>Papo (Héctor Sánchez) (STD sent)</li>
+        <li>David Been</li>
+        <li>Keno Hanna</li>
+        <li>Terrence Astwood</li>
+        <li>Kanavia Simmons</li>
+        <li>Lyndon Robinson</li>
+        <li>Patroni Smith</li>
+        <li>KK & Robyn Forbes</li>
+        <li>Cuchi</li>
+        <li>Lissett</li>
+        <li>Nicole (STD sent)</li>
+        <li>Elvardo Seymour (Fylboi)</li>
+        <li>Bonidett William</li>
+        <li>Roxann Lewis</li>
+        <li>Anna Taylor +1 (STD sent)</li>
+        <li>Zoya Fesler (STD sent)</li>
+        <li>Tyrek Fulford +1</li>
+        <li>Chuck (Hon. Alarlenton Musgrove)</li>
+        <li>Dexter Landy</li>
+        <li>Gravy & Sonia Missick</li>
+        <li>Luji Morris</li>
+        <li>Matthew Williams</li>
+        <li>Delvin Seymour</li>
+        <li>Latren Handfield</li>
+        <li>Frisco Weldon Gardnier</li>
+        <li>Carta Desir</li>
+        <li>Ingrid Simons</li>
+        <li>Jessie Forbes & Kealys</li>
+        <li>Cookie Rigby</li>
+        <li>Earlson Robinson</li>
+        <li>Nadia McDonald</li>
+        <li>Kenny & Nadine Forbes</li>
+        <li>Maria Smith +1</li>
+        <li>Mya Smith</li>
+        <li>Nycain Cunningham</li>
+        <li>Godfrey Smith</li>
+        <li>Travis Simmons</li>
+        <li>Pastor Janet Stubbs</li>
+        <li>Cox (bartender) (STD sent)</li>
+      </ul>
+    </section>
 
-        <label for="dessert">Select Your Dessert</label>
-        <select id="dessert" name="dessert" required>
-          <option value="">-- Choose your dessert --</option>
-          <option value="cake">Vanilla Bean Wedding Cake</option>
-          <option value="fruit">Fresh Fruit Tart</option>
-          <option value="vegan">Vegan Chocolate Mousse</option>
-        </select>
-      </div>
-
-      <label for="message">Leave a note for the couple (optional)</label>
-      <textarea id="message" name="message" rows="4"></textarea>
-
-      <button type="submit">Send RSVP</button>
-    </form>
-  </main>
-
-  <script>
-    const guestName = document.getElementById("guestName");
-    const plusOneSection = document.getElementById("plusOneSection");
-    const attendance = document.getElementById("attendance");
-    const menuSection = document.getElementById("menuSection");
-
-    guestName.addEventListener("change", function () {
-      const selected = this.options[this.selectedIndex];
-      if (selected.dataset.plusone === "yes") {
-        plusOneSection.style.display = "block";
-      } else {
-        plusOneSection.style.display = "none";
-      }
-    });
-
-    attendance.addEventListener("change", function () {
-      if (this.value === "yes") {
-        menuSection.style.display = "block";
-      } else {
-        menuSection.style.display = "none";
-      }
-    });
-
-    document.getElementById("rsvpForm").addEventListener("submit", function (e) {
-      e.preventDefault();
-      const name = guestName.value;
-      if (!name) {
-        alert("Please select your name from the guest list.");
-        return;
-      }
-      alert("Thank you for your RSVP, " + name + "!");
-      this.reset();
-      plusOneSection.style.display = "none";
-      menuSection.style.display = "none";
-    });
-  </script>
+  </div>
 </body>
 </html>
